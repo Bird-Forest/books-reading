@@ -1,0 +1,164 @@
+.libPage {
+  display: grid;
+  grid-template-columns: minmax(320px, 1280px);
+  grid-template-rows: 588px;
+  background-color: rgb(246, 247, 251);
+}
+@media screen and (min-width: 768px) {
+  .libPage {
+    grid-template-rows: 965px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .libPage {
+    grid-template-rows: 1280px;
+  }
+}
+.wrapLib {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+@media screen and (min-width: 768px) {
+  .wrapLib {
+    gap: 0;
+    padding: 32px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapLib {
+    width: 1280px;
+    padding: 40px 20px;
+  }
+}
+.wrapIcon {
+  display: flex;
+  width: 320px;
+  height: 32px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .wrapIcon {
+    display: none;
+  }
+}
+.iconLeft {
+  width: 32px;
+  height: 32px;
+  fill: rgb(255, 107, 8);
+}
+
+.createForm {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .createForm {
+    flex-wrap: wrap;
+    width: 700px;
+    gap: 20px;
+  }
+  .label:first-child {
+    width: 700px;
+  }
+  .label:nth-child(2) {
+    width: 340px;
+  }
+  .label:nth-child(3) {
+    width: 160px;
+  }
+  .label:nth-child(4) {
+    width: 160px;
+  }
+  .wrapBtnAdd:last-child {
+    width: 700px;
+  }
+  .input {
+    width: inherit;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .createForm {
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 1240px;
+    gap: 20px;
+  }
+  .label:first-child {
+    width: 348px;
+  }
+  .label:nth-child(2) {
+    width: 240px;
+  }
+  .wrapBtnAdd:last-child {
+    width: 170px;
+  }
+  .input {
+    width: inherit;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  color: rgb(137, 143, 159);
+  width: 280px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.21;
+  text-align: left;
+  gap: 8px;
+}
+.input {
+  display: flex;
+  width: inherit;
+  height: 42px;
+  border: 1px solid rgb(166, 171, 185);
+  background-color: rgb(246, 247, 251);
+  padding: 0 16px;
+  outline: none;
+}
+.input:focus {
+  border: none;
+  box-shadow: inset 0px 1px 2px 0px rgba(29, 29, 27, 0.15);
+  background-color: rgb(255, 255, 255);
+}
+.wrapBtnAdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .wrapBtnAdd {
+    width: 170px;
+    padding: 0;
+  }
+}
+.btnCreate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 42px;
+  color: rgb(0, 0, 0);
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.21;
+  text-align: center;
+  border: 1px solid rgb(36, 42, 55);
+  background-color: rgb(246, 247, 251);
+  padding: 0;
+}
+.btnCreate:hover,
+.btnCreate:focus {
+  border: 1px solid rgb(242, 81, 55);
+  background: rgb(246, 247, 251);
+}
