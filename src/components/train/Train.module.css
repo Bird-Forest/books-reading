@@ -22,6 +22,29 @@
     padding: 32px 32px 74px 32px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .caseTrain {
+    flex-direction: row-reverse;
+    width: 1280px;
+    height: 790px;
+    padding: 40px 16px 54px 16px;
+  }
+}
+.wrapBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .wrapBlock {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapBlock {
+    gap: 24px;
+  }
+}
 /* *** MY GOAL READ */
 .wrapTarget {
   display: flex;
@@ -39,6 +62,14 @@
     width: 704px;
     height: 105px;
     padding: 0 52px 0 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapTarget {
+    flex-direction: column;
+    width: 280px;
+    height: 236px;
+    padding: 0;
   }
 }
 .titleGoal {
@@ -66,9 +97,14 @@
 }
 @media screen and (min-width: 768px) {
   .countTarget {
-    width: 280px;
     height: 78px;
     gap: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .countTarget {
+    height: 236px;
+    gap: 20px;
   }
 }
 .wrapCount {
@@ -84,6 +120,13 @@
     width: 120px;
     height: 78px;
     gap: 4px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapCount {
+    width: 100px;
+    height: 148px;
+    gap: 14px;
   }
 }
 .counter {
@@ -123,6 +166,19 @@
     font-size: 12px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .counter {
+    width: 100px;
+    height: 100px;
+    gap: 0;
+  }
+  .textCounter {
+    justify-content: center;
+    width: 66px;
+    height: 34px;
+    font-size: 14px;
+  }
+}
 /* *** MY TRAINING */
 .visiblTrain {
   display: none;
@@ -149,6 +205,14 @@
     width: 704px;
     height: 196px;
     gap: 28px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapTrain {
+    width: 928px;
+    height: 192px;
+    gap: 24px;
     padding: 0;
   }
 }
@@ -193,6 +257,11 @@
     width: 704px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .titleTrain {
+    width: 928px;
+  }
+}
 .formAddBook {
   display: flex;
   flex-direction: column;
@@ -206,6 +275,16 @@
     width: 704px;
     height: 108px;
     gap: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .formAddBook {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 928px;
+    height: 108px;
+    gap: 32px;
   }
 }
 .labelDate {
@@ -305,6 +384,14 @@
     width: 484px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .labelSelect {
+    width: 716px;
+  }
+  .inputSelect {
+    width: 716px;
+  }
+}
 .wrapBtnAdd {
   display: flex;
   justify-content: center;
@@ -346,27 +433,24 @@
 }
 
 /* *** TITLE TABLE */
-.wrapTitleTable {
+/* .wrapTitleTable {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .wrapTitleTable {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 704px;
     height: 40px;
     border-top: 1px solid rgb(224, 229, 235);
   }
 }
-/* .titleTab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 704px;
-  height: 40px;
-  border-top: 1px solid rgb(224, 229, 235);
-} */
+@media screen and (min-width: 1280px) {
+  .wrapTitleTable {
+    width: 928px;
+  }
+}
 .textTab {
   display: flex;
   color: rgb(137, 143, 159);
@@ -388,11 +472,23 @@
 .textTab:nth-child(4) {
   width: 80px;
 }
-/* .textTab:last-child {
-  width: 40px;
+@media screen and (min-width: 1280px) {
+  .textTab:first-child {
+    width: 396px;
+  }
+  .textTab:nth-child(2) {
+    width: 264px;
+  }
+  .textTab:nth-child(3) {
+    width: 132px;
+  }
+  .textTab:nth-child(4) {
+    width: 136px;
+  }
 } */
+
 /* *** ITEM BOOK EMPTY */
-.wrapBook {
+/* .wrapBook {
   display: flex;
   flex-direction: column;
   width: 280px;
@@ -407,6 +503,11 @@
     justify-content: center;
     width: 704px;
     height: 62px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapBook {
+    width: 928px;
   }
 }
 .wrapTitleBook {
@@ -442,7 +543,7 @@
   font-weight: 500;
   line-height: 1.25;
   text-align: left;
-}
+} */
 /* *** MY CHART */
 .wrapChart {
   display: flex;
@@ -458,6 +559,11 @@
   .wrapChart {
     width: 704px;
     height: 340px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapChart {
+    width: 928px;
   }
 }
 .wrapTitleChart {

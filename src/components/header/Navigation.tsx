@@ -8,8 +8,6 @@ export default function Navigation() {
       <Link href="/">Home</Link>
       <Link href="/signin">SignIn</Link>
       <Link href="/siginup">SignUp</Link>
-      <Link href="/liba">Library</Link>
-      <Link href="/train">Train</Link>
     </div>
   );
 }

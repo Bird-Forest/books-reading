@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Main.module.css";
 import { abril } from "@/app/fonts";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import Link from "next/link";
 
 export default function MainInfo() {
   return (
@@ -61,9 +62,9 @@ export default function MainInfo() {
         </div>
       </div>
       <div className={styles.wrapBtns}>
-        <button type="button" className={styles.btnLogin}>
+        <Link href="/liba" className={styles.btnLogin}>
           Увійти
-        </button>
+        </Link>
         <button type="button" className={styles.btnAuth}>
           Реєстрація
         </button>

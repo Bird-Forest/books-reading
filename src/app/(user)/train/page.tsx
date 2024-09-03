@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../components/train/Train.module.css";
+import styles from "@/components/train/Train.module.css";
 // import MyTraining from "@/components/train/MyTraining";
 // import MyGoalRead from "@/components/train/MyGoalRead";
 // import MyListBooks from "@/components/train/MyListBooks";
