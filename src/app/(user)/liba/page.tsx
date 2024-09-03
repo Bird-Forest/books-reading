@@ -4,6 +4,8 @@ import NavigateLibrary from "@/components/liba/NavigateLibrary";
 import BookForm from "@/components/liba/BookForm";
 import ListBooksStart from "@/components/liba/ListBooksStart";
 import ListBooksInit from "@/components/liba/ListBooksInit";
+import books from "@/books.json";
+import ListBooksEnd from "@/components/liba/ListBooksEnd";
 
 // export interface PageProps {}
 
@@ -16,6 +18,7 @@ export default function LibraryPage() {
       </div>
       <div className={styles.wrapLibDeck}>
         <BookForm />
+        <ListBooksEnd />
         <ListBooksInit />
         <ListBooksStart />
       </div>

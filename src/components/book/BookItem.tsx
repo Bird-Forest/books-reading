@@ -1,24 +1,25 @@
 import React from "react";
 import { MdMenuBook } from "react-icons/md";
 import styles from "./Book.module.css";
+import { BookItemProps } from "@/types/book";
 
-export interface BookItemProps {
-  id: number;
-  title: string;
-  author: string;
-  pages: number;
-  year: string;
-  rating?: number;
-  category?: string;
-  resume?: string;
-  statistics?: [any];
-}
+// export interface BookItemProps {
+//   id: number;
+//   title: string;
+//   author: string;
+//   pages: number;
+//   year: string;
+//   rating?: boolean[];
+//   category?: string;
+//   resume?: string;
+//   statistics?: any[];
+// }
 
 export default function BookItem(item: BookItemProps) {
   return (
     <li key={item.id} className={styles.wrapBook}>
       <div className={styles.wrapTitleBook}>
-        <div className={styles.wrapIconBook}>
+        <div className={styles.wrapIcon}>
           <MdMenuBook
             className={
               item.category !== "init" ? styles.iconBook : styles.iconBookOrang
