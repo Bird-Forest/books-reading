@@ -18,9 +18,11 @@ export default function LibraryPage() {
       </div>
       <div className={styles.wrapLibDeck}>
         <BookForm />
-        <ListBooksEnd />
-        <ListBooksInit />
-        <ListBooksStart />
+        <div className={styles.wrapAllList}>
+          <ListBooksEnd />
+          <ListBooksInit />
+          <ListBooksStart />
+        </div>
       </div>
     </>
   );

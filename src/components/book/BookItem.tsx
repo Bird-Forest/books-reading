@@ -17,7 +17,7 @@ import { BookItemProps } from "@/types/book";
 
 export default function BookItem(item: BookItemProps) {
   return (
-    <li key={item.id} className={styles.wrapBook}>
+    <li key={item._id} className={styles.wrapBook}>
       <div className={styles.wrapTitleBook}>
         <div className={styles.wrapIcon}>
           <MdMenuBook

@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "./Form.module.css";
+import styles from "./Main.module.css";
 import { abril } from "@/app/fonts";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 export default function Information() {
   return (
     <div className={styles.wrapInfo}>
+      <h1 className={`${abril.className} ${styles.infoTitle}`}>
+        Books Reading
+      </h1>
       <div className={styles.caseInfo}>
-        <h1 className={`${abril.className} ${styles.infoTitle}`}>
-          Books Reading
-        </h1>
         <div className={styles.blockInfo}>
           <h5 className={styles.blockTitle}>Допоможе вам</h5>
           <div className={styles.boxInfo}>

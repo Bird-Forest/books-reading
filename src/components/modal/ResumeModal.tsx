@@ -8,7 +8,7 @@ import { useFormStatus } from "react-dom";
 // import { formAction } from "@/services/books";
 import { BookItemProps } from "@/types/book";
 
-export default function ResumeModal({ item }: ResumeModalProps) {
+export default function ResumeModal({ item, closeModal }: ResumeModalProps) {
   const [book, setBook] = useState<BookItemProps>(item);
   const [checkboxStates, setCheckboxStates] = useState<boolean[]>(
     item.rating ?? [false, false, false, false, false]
@@ -69,7 +69,11 @@ export default function ResumeModal({ item }: ResumeModalProps) {
           />
         </label>
         <div className={styles.wrapBtnResume}>
-          <button type="button" className={styles.btnResWhite}>
+          <button
+            type="button"
+            onClick={closeModal}
+            className={styles.btnResWhite}
+          >
             Назад
           </button>
           <button type="submit" className={styles.btnResOrang}>

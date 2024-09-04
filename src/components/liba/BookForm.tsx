@@ -1,14 +1,30 @@
+"use client";
+
 import React from "react";
 import styles from "./Library.module.css";
+import { BookCategory, BookItemProps } from "@/types/book";
 
 export default function BookForm() {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const newBook: BookItemProps = {
+      title: formData.get("title") as string,
+      author: formData.get("author") as string,
+      year: formData.get("year") as string,
+      pages: Number(formData.get("pages")),
+      rating: [false, false, false, false, false],
+      category: BookCategory.Start,
+    };
+    console.log(newBook);
+    event.currentTarget.reset();
+  };
   return (
-    <form className={styles.createForm}>
+    <form onSubmit={handleSubmit} className={styles.createForm}>
       <label htmlFor="title" className={styles.label}>
         Назва книги
         <input
           name="title"
-          type="text"
           placeholder="..."
           required
           className={styles.input}
@@ -18,7 +34,6 @@ export default function BookForm() {
         Автор книги
         <input
           name="author"
-          type="text"
           placeholder="..."
           required
           className={styles.input}
@@ -28,8 +43,6 @@ export default function BookForm() {
         Рік випуску
         <input
           name="year"
-          type="text"
-          // inputmode="numeric"
           placeholder="..."
           required
           className={styles.input}
@@ -39,7 +52,6 @@ export default function BookForm() {
         Кількість сторінок
         <input
           name="pages"
-          type="text"
           placeholder="..."
           required
           className={styles.input}

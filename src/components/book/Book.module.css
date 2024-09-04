@@ -103,9 +103,6 @@
   font-weight: 500;
   line-height: 1.25;
   text-align: left;
-  /* text-wrap: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
 }
 .wrapTextBook {
   display: flex;
@@ -116,7 +113,10 @@
   padding: 0;
 }
 @media screen and (min-width: 768px) {
-  .wrapTitleBook {
+  .wrapTitleBook:first-child {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     width: 50%;
   }
   .wrapTextBook:nth-child(2) {
@@ -216,22 +216,22 @@
   padding: 0;
 }
 @media screen and (min-width: 768px) {
-  .wrapTitleEnd {
+  .wrapTitleEnd:first-child {
     width: 30%;
   }
   .wrapTextEnd:nth-child(2) {
-    width: 25%;
+    width: 24%;
   }
   .wrapTextEnd:nth-child(3) {
-    justify-content: flex-end;
-    width: 7.5%;
+    justify-content: center;
+    width: 8%;
   }
   .wrapTextEnd:nth-child(4) {
-    justify-content: flex-end;
-    width: 7.5%;
+    justify-content: center;
+    width: 8%;
   }
   .wrapTextEnd:nth-child(5) {
-    justify-content: flex-end;
+    justify-content: center;
     width: 17%;
   }
   .wrapBtnResume:nth-child(6) {
@@ -240,19 +240,22 @@
   }
 }
 @media screen and (min-width: 1280px) {
-  .wrapTitleEnd {
-    width: 35%;
+  .wrapTitleEnd:first-child {
+    width: 33%;
   }
   .wrapTextEnd:nth-child(2) {
-    width: 20%;
+    width: 22%;
   }
   .wrapTextEnd:nth-child(3) {
+    justify-content: center;
     width: 8%;
   }
   .wrapTextEnd:nth-child(4) {
+    justify-content: center;
     width: 8%;
   }
   .wrapTextEnd:nth-child(5) {
+    justify-content: center;
     width: 15%;
   }
   .wrapBtnResume:nth-child(6) {

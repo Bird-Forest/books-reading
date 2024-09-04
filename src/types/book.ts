@@ -1,11 +1,17 @@
+export enum BookCategory {
+  Start = 'start',
+  Init = 'init',
+  End = 'end',
+}
+
 export interface BookItemProps {
-  id: number;
+  _id?: string;
   title: string;
   author: string;
   pages: number;
   year: string;
   rating?: boolean[];
-  category?: string;
+  category?: BookCategory;
   resume?: string;
   statistics?: any[];
 }

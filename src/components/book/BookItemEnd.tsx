@@ -20,7 +20,7 @@ export default function BookItemEnd(item: BookItemProps) {
   };
 
   return (
-    <li key={item.id} className={styles.wrapBookEnd}>
+    <li key={item._id} className={styles.wrapBookEnd}>
       <div className={styles.wrapTitleEnd}>
         <div className={styles.wrapIconBook}>
           <MdMenuBook
@@ -65,7 +65,7 @@ export default function BookItemEnd(item: BookItemProps) {
           createPortal(
             <OverlayModal
               closeModal={closeModal}
-              content={<ResumeModal item={item} />}
+              content={<ResumeModal item={item} closeModal={closeModal} />}
             />,
             document.body
           )}

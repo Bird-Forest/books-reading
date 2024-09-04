@@ -339,8 +339,14 @@
     font-size: 20px;
   }
 }
+/* *** REGISTER INFORMATION */
+.wrapSignInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* *** INFO */
-.wrapInfo {
+/* .wrapInfo {
   display: none;
 }
 @media screen and (min-width: 768px) {
@@ -412,4 +418,4 @@
   font-weight: 500;
   line-height: 1.21;
   text-align: left;
-}
+} */

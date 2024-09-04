@@ -1,34 +1,65 @@
 .pageMain {
   display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0 auto;
 }
-.wrapInfo {
+.wrapMainInfo {
   display: flex;
   flex-direction: column;
   width: 320px;
   height: 588px;
-  gap: 24px;
-  padding: 32px 24px 40px 24px;
+  gap: 60px;
+  padding: 32px 20px 40px 20px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .wrapMainInfo {
+    width: auto;
+  }
+}
+.wrapInfo {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  /* height: 588px; */
+  gap: 32px;
+  /* padding: 32px 24px 40px 24px; */
 }
 @media screen and (min-width: 768px) {
   .wrapInfo {
     width: 480px;
   }
 }
+.caseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .infoTitle {
   display: flex;
+  width: 100%;
+  height: 38px;
   color: rgb(36, 42, 55);
   font-size: 34px;
-  line-height: 1.18;
+  font-weight: 400;
+  line-height: 1.11;
   text-align: center;
   justify-content: center;
 }
 .blockInfo {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 .blockTitle {
   display: flex;
+  width: 100%;
+  height: 38px;
   color: rgb(36, 42, 55);
   font-size: 20px;
   font-weight: 500;
@@ -73,6 +104,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  padding: 0;
 }
 .btnLogin {
   display: flex;
@@ -89,6 +121,7 @@
   text-align: center;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
+  padding: 0;
 }
 .btnLogin:hover,
 .btnLogin:focus {
@@ -109,9 +142,16 @@
   text-align: center;
   background-color: rgb(255, 107, 8);
   cursor: pointer;
+  padding: 0;
 }
 .btnAuth:hover,
 .btnAuth:focus {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
   background: rgb(209, 88, 7);
 }
+/* *** REGISTER INFORMATION */
+/* .wrapSignInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

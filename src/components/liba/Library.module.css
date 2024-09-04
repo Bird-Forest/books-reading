@@ -26,6 +26,9 @@
 .wrapLibDeck {
   display: none;
 }
+.wrapAllList {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .wrapLibMob {
     display: none;
@@ -36,16 +39,183 @@
     justify-content: flex-start;
     align-items: center;
     gap: 40px;
-    padding: 32px 0;
+    padding: 32px 0 60px 0;
+  }
+  .wrapAllList {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
   .wrapLibDeck {
-    width: 1280px;
-    padding: 40px 20px;
+    /* width: 1280px; */
+    gap: 80px;
+    padding: 40px 160px;
+  }
+  .wrapAllList {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 }
-/* *** NAVIGATE */
+/* *** LIST ANY */
+.titleList {
+  display: flex;
+  color: rgb(36, 42, 55);
+  font-family: var(--font-montserrat);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.21;
+  text-align: left;
+}
+.wrapListAny {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: auto;
+  gap: 20px;
+  padding: 10px 20px 32px 20px;
+}
+@media screen and (min-width: 768px) {
+  .wrapListAny {
+    width: 704px;
+    gap: 24px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapListAny {
+    width: 1248px;
+  }
+}
+.wrapTabList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* *** LIST START */
+/* .wrapListStart {
+  display: flex;
+  flex-direction: column;
+} */
+.listStart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .listStart {
+    gap: 8px;
+  }
+}
+/* *** TABLE HEADERS */
+.wrapTitleTable {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .wrapTitleTable {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 704px;
+    height: 18px;
+    /* border-top: 1px solid rgb(224, 229, 235); */
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapTitleTable {
+    width: 1248px;
+  }
+}
+.textTab {
+  display: flex;
+  color: rgb(137, 143, 159);
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.21;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .textTab:first-child {
+    width: 50%;
+  }
+  .textTab:nth-child(2) {
+    width: 30%;
+  }
+  .textTab:nth-child(3) {
+    justify-content: center;
+    width: 10%;
+  }
+  .textTab:nth-child(4) {
+    justify-content: center;
+    width: 10%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .textTab:nth-child(3) {
+    width: 10%;
+    padding: 0 32px 0 0;
+  }
+  .textTab:nth-child(4) {
+    width: 10%;
+    padding: 0 36px 0 0;
+  }
+}
+/* *** TABLE HEADERS END */
+.textTabEnd {
+  display: flex;
+  color: rgb(137, 143, 159);
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.21;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .textTabEnd:first-child {
+    width: 33%;
+  }
+  .textTabEnd:nth-child(2) {
+    width: 20%;
+  }
+  .textTabEnd:nth-child(3) {
+    justify-content: center;
+    width: 8%;
+  }
+  .textTabEnd:nth-child(4) {
+    justify-content: center;
+    width: 8%;
+  }
+  .textTabEnd:nth-child(5) {
+    justify-content: center;
+    width: 12%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .textTabEnd:first-child {
+    width: 33%;
+  }
+  .textTabEnd:nth-child(2) {
+    width: 20%;
+  }
+  .textTabEnd:nth-child(3) {
+    /* justify-content: center; */
+    width: 9%;
+  }
+  .textTabEnd:nth-child(4) {
+    /* justify-content: center; */
+    width: 8%;
+  }
+  .textTabEnd:nth-child(5) {
+    /* justify-content: center; */
+    width: 13%;
+  }
+}
+/* *** FORM ADD BOOK */
 .wrapNavigate {
   display: flex;
   align-items: flex-end;
@@ -72,7 +242,6 @@
   height: 36px;
   fill: rgb(255, 107, 8);
 }
-
 .createForm {
   display: flex;
   flex-wrap: wrap;
@@ -183,92 +352,7 @@
   border: 1px solid rgb(242, 81, 55);
   background: rgb(246, 247, 251);
 }
-/* *** TABLE HEADERS */
-.wrapTitleTable {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .wrapTitleTable {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 704px;
-    height: 40px;
-    border-top: 1px solid rgb(224, 229, 235);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .wrapTitleTable {
-    width: 928px;
-  }
-}
-.textTab {
-  display: flex;
-  color: rgb(137, 143, 159);
-  font-family: var(--font-montserrat);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.21;
-  text-align: left;
-}
-.textTab:first-child {
-  width: 300px;
-}
-.textTab:nth-child(2) {
-  width: 200px;
-}
-.textTab:nth-child(3) {
-  width: 80px;
-}
-.textTab:nth-child(4) {
-  width: 80px;
-}
-@media screen and (min-width: 1280px) {
-  .textTab:first-child {
-    width: 396px;
-  }
-  .textTab:nth-child(2) {
-    width: 264px;
-  }
-  .textTab:nth-child(3) {
-    width: 132px;
-  }
-  .textTab:nth-child(4) {
-    width: 136px;
-  }
-}
-/* *** LIST ANY */
-.titleList {
-  display: flex;
-  color: rgb(36, 42, 55);
-  font-family: var(--font-montserrat);
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 23px;
-  letter-spacing: 0%;
-  text-align: left;
-}
-.wrapListAny {
-  /* position: relative; */
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  height: auto;
-  gap: 20px;
-  padding: 10px 20px 32px 20px;
-}
-@media screen and (min-width: 768px) {
-  .wrapListAny {
-    width: 704px;
-    gap: 8px;
-    padding: 32px 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .wrapListAny {
-    width: 1248px;
-  }
-}
+
 /* *** BUTTON MY TRAIN  */
 .wrapBtnTrain {
   display: flex;
@@ -292,17 +376,7 @@
   background-color: rgb(255, 107, 8);
   border: none;
 }
-/* *** LIST START */
-.wrapListStart {
-  display: flex;
-  flex-direction: column;
-}
-.listStart {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 0;
-}
+
 .wrapBtnMore {
   bottom: 0;
   position: absolute;
