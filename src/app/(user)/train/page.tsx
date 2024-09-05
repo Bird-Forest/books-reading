@@ -16,9 +16,6 @@ export default function TrainPage() {
       </div>
       <div className={styles.wrapTrainDeck}>
         <TrainPanel />
-        {/* <MyGoalRead />
-        <MyTraining />
-        <MyListBooks /> */}
       </div>
     </>
   );

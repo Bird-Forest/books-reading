@@ -17,11 +17,19 @@
   gap: 0;
   padding: 20px 20px 38px 20px;
 }
+.boxTrain {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .wrapTrainDeck {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .wrapTrainMob {
+    display: none;
+  }
+  .boxTrain {
     display: none;
   }
   .wrapTrainDeck {
@@ -638,7 +646,15 @@
   }
 }
 
-/* *** ITEM BOOK EMPTY */
+/* *** BUTTON LINK */
+.wrapBtnLink {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
 
 /* @media screen and (min-width: 768px) {
   .wrapEmpty {

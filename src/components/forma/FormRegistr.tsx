@@ -3,6 +3,7 @@ import ButtonSubmit from "../button/ButtonSubmit";
 import ButtonGoogl from "../button/ButtonGoogl";
 import styles from "./Form.module.css";
 import type { FormEventHandler } from "react";
+import Link from "next/link";
 
 export default function FormRegistr() {
   // const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
@@ -82,7 +83,9 @@ export default function FormRegistr() {
           </form>
           <div className={styles.wrapLink}>
             <p className={styles.textLink}>Вже з нами?</p>
-            <p className={styles.linkAuth}>Увійти</p>
+            <Link href="/signin" className={styles.linkAuth}>
+              Увійти
+            </Link>
           </div>
         </div>
       </div>

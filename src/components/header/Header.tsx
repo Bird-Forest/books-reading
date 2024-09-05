@@ -7,8 +7,8 @@ import Sidebar from "./Sidebar";
 export default function Header() {
   return (
     <div className={styles.header}>
-      <h4 className={`${abril.className} ${styles.logo}`}>BR</h4>
-      <Navigation />
+      {/* <h4 className={`${abril.className} ${styles.logo}`}>BR</h4>
+      <Navigation /> */}
       <Sidebar />
     </div>
   );

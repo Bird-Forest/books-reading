@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./Header.module.css";
+import { SidebarItemProps } from "@/types/sidebar";
 
-export interface SidebarItemProps {
-  current: boolean;
-  pathname: string;
-  children: React.ReactNode;
-}
+// export interface SidebarItemProps {
+//   current: boolean;
+//   pathname: string;
+//   children: React.ReactNode;
+// }
 
 export default function SidebarItem({
   current,

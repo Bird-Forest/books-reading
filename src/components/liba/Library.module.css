@@ -592,7 +592,15 @@
   background: rgb(246, 247, 251);
 }
 
-/* *** BUTTON MY TRAIN  */
+/* *** BUTTON LINK  */
+.wrapBtnLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 28px 0 128px 0;
+}
 /* .wrapBtnTrain {
   display: flex;
   justify-content: center;

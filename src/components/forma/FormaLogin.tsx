@@ -5,6 +5,7 @@ import styles from "./Form.module.css";
 import ButtonSubmit from "../button/ButtonSubmit";
 import type { FormEventHandler } from "react";
 import ButtonGoogl from "../button/ButtonGoogl";
+import Link from "next/link";
 // import { useRouter } from "next/router";
 
 // interface User {
@@ -69,7 +70,9 @@ export default function FormaLogin() {
             <ButtonSubmit>Увійти</ButtonSubmit>
             {/* {!auth ? " " : <p className={styles.authLink}>{mess}</p>} */}
           </form>
-          <p className={styles.linkAuth}>Реєстрація</p>
+          <Link href="/signup" className={styles.linkAuth}>
+            Реєстрація
+          </Link>
         </div>
       </div>
     </div>
