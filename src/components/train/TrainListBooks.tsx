@@ -1,21 +1,46 @@
 import React from "react";
 import styles from "./Train.module.css";
-// import ItemBookEmpty from "../book/ItemBookEmpty";
+import books from "@/books.json";
+import { BookCategory, BookItemProps } from "@/types/book";
 import TableHeaders from "../liba/TableHeaders";
+import BookItem from "../book/BookItem";
+import { BiSolidTrash } from "react-icons/bi";
+import { MdMenuBook } from "react-icons/md";
 import BookItemEmpty from "../book/BookItemEmpty";
 
+const typedBooks: BookItemProps[] = books as BookItemProps[];
+
 export default function TrainListBooks() {
+  const arrInit = typedBooks.filter(
+    (item) => item.category === BookCategory.Init
+  );
   return (
     <div className={styles.wrapListBook}>
-      {/* <div className={styles.wrapTitleTable}>
-        <p className={styles.textTab}>Назва книги</p>
-        <p className={styles.textTab}>Автор</p>
-        <p className={styles.textTab}>Рік</p>
-        <p className={styles.textTab}>Стор.</p>
-      </div> */}
-      <TableHeaders />
-      <BookItemEmpty />
-      {/* <ItemBookEmpty /> */}
+      <div className={styles.wrapTitleTable}>
+        <TableHeaders />
+      </div>
+      <ul className={styles.listBook}>
+        {arrInit.map((item, i) => (
+          <li key={i} className={styles.wrapItemTrain}>
+            <BookItem
+              title={item.title}
+              author={item.author}
+              pages={item.pages}
+              category={item.category}
+              year={item.year}
+            />
+            <button type="button" className={styles.btnTrash}>
+              <BiSolidTrash className={styles.iconTrash} />
+            </button>
+          </li>
+        ))}
+        <div className={styles.wrapEmptyItem}>
+          <div className={styles.wrapIcon}>
+            <MdMenuBook className={styles.iconBook} />
+          </div>
+          <p className={styles.textBook}>...</p>
+        </div>
+      </ul>
     </div>
   );
 }

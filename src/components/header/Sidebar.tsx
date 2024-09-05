@@ -6,8 +6,9 @@ import { MdMenuBook } from "react-icons/md";
 import SidebarItem from "./SidebarItem";
 import { usePathname, useRouter } from "next/navigation";
 import styles from "./Header.module.css";
+import { SidebarProps } from "@/types/sidebar";
 
-export interface SidebarProps {}
+// export interface SidebarProps {}
 
 export default function Sidebar({}: SidebarProps) {
   const router = useRouter();

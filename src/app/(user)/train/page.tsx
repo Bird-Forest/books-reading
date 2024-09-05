@@ -4,14 +4,22 @@ import styles from "@/components/train/Train.module.css";
 // import MyGoalRead from "@/components/train/MyGoalRead";
 // import MyListBooks from "@/components/train/MyListBooks";
 import TrainPanel from "@/components/train/TrainPanel";
+import NavigateTrain from "@/components/info/NavigateTrain";
+import FormTrain from "@/components/train/FormTrain";
 
 export default function TrainPage() {
   return (
-    <section className={styles.trainPage}>
-      <TrainPanel />
-      {/* <MyGoalRead />
-      <MyTraining />
-      <MyListBooks /> */}
-    </section>
+    <>
+      <div className={styles.wrapTrainMob}>
+        <NavigateTrain />
+        <FormTrain />
+      </div>
+      <div className={styles.wrapTrainDeck}>
+        <TrainPanel />
+        {/* <MyGoalRead />
+        <MyTraining />
+        <MyListBooks /> */}
+      </div>
+    </>
   );
 }

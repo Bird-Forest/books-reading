@@ -5,7 +5,7 @@ export enum BookCategory {
 }
 
 export interface BookItemProps {
-  _id?: string;
+  _id?: string | number;
   title: string;
   author: string;
   pages: number;

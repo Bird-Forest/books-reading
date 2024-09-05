@@ -19,15 +19,16 @@ export default function ListBooksInit() {
         <TableHeaders />
         <ul className={styles.listStart}>
           {arrInit.map((item, i) => (
-            <BookItem
-              key={i}
-              // id={item._id}
-              title={item.title}
-              author={item.author}
-              pages={item.pages}
-              category={item.category}
-              year={item.year}
-            />
+            <li key={i} className={`${styles.wrapBook} ${styles.bgBook}`}>
+              <BookItem
+                // id={item._id}
+                title={item.title}
+                author={item.author}
+                pages={item.pages}
+                category={item.category}
+                year={item.year}
+              />
+            </li>
           ))}
         </ul>
       </div>

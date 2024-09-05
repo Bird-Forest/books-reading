@@ -1,30 +1,28 @@
 "use client";
 
 import React from "react";
-import styles from "./Library.module.css";
+import styles from "./Navigate.module.css";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SidebarProps } from "@/types/sidebar";
 
-export interface SidebarProps {}
-
-export default function NavigateLibrary({}: SidebarProps) {
+export default function NavigateTrain({}: SidebarProps) {
   const pathname = usePathname();
-
   return (
     <div className={styles.wrapNavigate}>
-      {pathname === "/liba" && (
+      {pathname === "/train" && (
         <Link
-          href="liba/listbooks"
+          href="/train/trainlist"
           className={styles.wrapIcon}
           style={{ justifyContent: "flex-end" }}
         >
           <HiArrowLongRight className={styles.iconNav} />
         </Link>
       )}
-      {pathname === "/liba/listbooks" && (
+      {pathname === "/train/trainlist" && (
         <Link
-          href="/liba"
+          href="/train"
           className={styles.wrapIcon}
           style={{ justifyContent: "flex-start" }}
         >

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Library.module.css";
-import { BsPlusLg } from "react-icons/bs";
+// import { BsPlusLg } from "react-icons/bs";
 import TableHeaders from "./TableHeaders";
 import books from "@/books.json";
 import BookItem from "../book/BookItem";
@@ -21,32 +21,33 @@ export default function ListBooksStart() {
         <TableHeaders />
         <ul className={styles.listStart}>
           {arrStart.map((item, i) => (
-            <BookItem
-              key={i}
-              // id={item._id}
-              title={item.title}
-              author={item.author}
-              pages={item.pages}
-              category={item.category}
-              year={item.year}
-            />
+            <li key={i} className={`${styles.wrapBook} ${styles.bgBook}`}>
+              <BookItem
+                // id={item._id}
+                title={item.title}
+                author={item.author}
+                pages={item.pages}
+                category={item.category}
+                year={item.year}
+              />
+            </li>
           ))}
         </ul>
       </div>
 
       {/* <div className={styles.wrapListStart}> */}
-      <div className={styles.wrapBtnTrain}>
+      {/* <div className={styles.wrapBtnTrain}>
         <button type="button" className={styles.btnMyTrain}>
           Моє тренування
         </button>
-      </div>
+      </div> */}
       {/* </div> */}
 
-      <div className={styles.wrapBtnMore}>
+      {/* <div className={styles.wrapBtnMore}>
         <button type="button" className={styles.btnMore}>
           <BsPlusLg className={styles.iconMore} />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -2,29 +2,14 @@ import React from "react";
 import { MdMenuBook } from "react-icons/md";
 import styles from "./Book.module.css";
 import { BookItemProps } from "@/types/book";
+import { BiSolidTrash } from "react-icons/bi";
 
-// export interface BookItemProps {
-//   id: number;
-//   title: string;
-//   author: string;
-//   pages: number;
-//   year: string;
-//   rating?: boolean[];
-//   category?: string;
-//   resume?: string;
-//   statistics?: any[];
-// }
-
-export default function BookItem(item: BookItemProps) {
+export default function BookItemTrain(item: BookItemProps) {
   return (
-    <div key={item._id} className={styles.wrapBox}>
+    <li key={item._id} className={styles.wrapBook}>
       <div className={styles.wrapTitleBook}>
         <div className={styles.wrapIcon}>
-          <MdMenuBook
-            className={
-              item.category !== "init" ? styles.iconBook : styles.iconBookOrang
-            }
-          />
+          <MdMenuBook className={styles.iconBook} />
         </div>
         <h6 className={styles.titleBook}>{item.title}</h6>
       </div>
@@ -40,6 +25,9 @@ export default function BookItem(item: BookItemProps) {
         <p className={styles.keyBook}>Стор.:</p>
         <p className={styles.textBook}>{item.pages}</p>
       </div>
-    </div>
+      <button type="button" className={styles.btnTrash}>
+        <BiSolidTrash className={styles.iconTrash} />
+      </button>
+    </li>
   );
 }

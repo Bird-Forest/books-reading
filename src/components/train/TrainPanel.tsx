@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Train.module.css";
 import MyGoalRead from "./MyGoalRead";
 import MyChart from "./MyChart";
-import MyTraining from "./MyTraining";
+import MyTraining from "./FormTrain";
 import TrainListBooks from "./TrainListBooks";
 // import TitlesOfTable from "./TitlesOfTable";
 // import ItemBookEmpty from "./ItemBookEmpty";
