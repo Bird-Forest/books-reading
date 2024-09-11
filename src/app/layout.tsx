@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import styles from "./page.module.css";
 import Header from "@/components/header/Header";
+import { Providers } from "@/components/helper/Providers";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -23,12 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body>
-        <div className={styles.container}>
-          <div className={styles.top}>
-            <Header />
+        <Providers>
+          <div className={styles.container}>
+            <div className={styles.top}>
+              <Header />
+            </div>
+            <main className={styles.page}>{children}</main>
           </div>
-          <main className={styles.page}>{children}</main>
-        </div>
+        </Providers>
       </body>
     </html>
   );

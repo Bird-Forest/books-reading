@@ -10,12 +10,12 @@ export default function MainInfo() {
     <div className={styles.wrapMainInfo}>
       <Information />
       <div className={styles.wrapBtns}>
-        <Link href="/liba" className={styles.btnLogin}>
+        <Link href="/signin" className={styles.btnLogin}>
           Увійти
         </Link>
-        <button type="button" className={styles.btnAuth}>
+        <Link href="/signup" className={styles.btnAuth}>
           Реєстрація
-        </button>
+        </Link>
       </div>
     </div>
     // <div className={styles.wrapInfo}>

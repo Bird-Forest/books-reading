@@ -13,5 +13,5 @@ export interface BookItemProps {
   rating?: boolean[];
   category?: BookCategory;
   resume?: string;
-  statistics?: any[];
+  // createdBy: Type.ObjectId;
 }

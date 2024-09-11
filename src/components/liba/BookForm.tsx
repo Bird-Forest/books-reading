@@ -3,9 +3,10 @@
 import React from "react";
 import styles from "./Library.module.css";
 import { BookCategory, BookItemProps } from "@/types/book";
+// import { createBook } from "@/services/books";
 
 export default function BookForm() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const newBook: BookItemProps = {
@@ -17,6 +18,8 @@ export default function BookForm() {
       category: BookCategory.Start,
     };
     console.log(newBook);
+    // const notice = await createBook(newBook);
+    // console.log(notice);
     event.currentTarget.reset();
   };
   return (
